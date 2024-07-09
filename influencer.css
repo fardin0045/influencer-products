@@ -46,10 +46,12 @@ nav li a{
 .banner-title{
     padding-top: 40px;
     color: #3A3A3A;
-   
+   font-size: xx-large;
+   font-weight: 900;
     align-items: center;
 }
 .banner-description{
+    font-weight: 500;
     color: #3A3A3A;
     padding-top: 10px; 
     padding-bottom: 20px;
@@ -64,14 +66,15 @@ nav li a{
 }
 
 .image{
+    
     background-image: url(images/Circle\ design.svg);
 }
 /*main section*/
 
-.company-image{
-    display: flex;
-}
 .img-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
     border-top: 1px solid #3A3A3A;
     border-bottom: 1px solid #3A3A3A;
     padding-top: 20px;
@@ -99,9 +102,89 @@ nav li a{
     padding-left:10%;
     
 }
+#join-now{
+    color: #E02C6D;
+    background-color:#FFF;
+    border: 0px;
+    font-weight: 500;
+    text-align: center;
+ 
+}
+
 .popular-img{
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
+}
+/* Featured section styles */
+.features-products{
+    display: flex;
+    margin-left:15%;
+}
+.features-description{
+    display: block;
+    padding-left: 50px;
+}
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+}
+/*footer styles*/
+footer{
+    background-color: rgb(4, 4, 49);
+    color:#FFFFFF;
+    text-align: center;
+    margin-top:50px ;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+@media screen and (max-width:576px) {
+    .header-title{
+        margin: 10px;
+    }
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+    .banner-title{
+        padding-top: 20px;
+    }
+   .banner{
+    margin: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+   }
+   .banner-content{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+   }
+    .header-title{
+        flex-direction: column;
+    }
+    .img-container{
+        grid-template-columns: repeat(4, 1fr);
+        gap:0px;
+        margin-top:60px;
+        padding: 0px;
+    }
+    .popular-collection, .popular-cards,.popular-img{
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding-left:3% ;
+    }
+    .features-products{
+        flex-direction: column-reverse;     
+    }
+    .btn-primary{
+        margin-bottom: 40px;
+    }
+    footer{
+        width: 100%;
+       
+    }
 }
